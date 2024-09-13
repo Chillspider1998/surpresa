@@ -1,0 +1,163 @@
+/* importando as fontes do google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+/* criando variaveis em CSS */
+:root {
+    --cor-background: #F2F2F2;
+    --cor-font: #26211D;
+    --cor-destaque: #1E4359;
+    --cor-hover: #183D3D;
+
+    --font-primaria: "Krona One", sans-serif;
+    --font-secundaria: "Montserrat", sans-serif;
+}
+
+* {   /* resetando css padrao, o asterisco indica todos os elementos da pagina */
+    margin: 0;  /* espaco em volta da borda */
+    padding: 0; /* espaco entre a borda e o conteudo */
+}
+
+/* corpo da nossa pagina */
+body {
+    /* height: 100vh;  vh ==> viewport height, definindo o tamanho da tela para 100% do viewport height */
+    box-sizing: border-box; /* border-box ==> ajusta o conteudo filho sempre dentro do conteudo pai */
+    background-color: var(--cor-background);  /* utilizando as variaveis */
+    color: var(--cor-font);
+}
+
+.cabecalho {
+    padding: 1% 0% 0% 35%;
+    font-size: 2.25rem;
+    font-family: var(--font-primaria);
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-destaque);
+    text-decoration: none;
+}
+
+/* <main> */
+.apresentacao {
+    padding: 5% 10%;
+    display: flex;  /* Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens. */
+    align-items: center; /* alinhando os intens da tag pai no centro */
+    justify-content: space-between; /* deixando um espaco entre os elementos do pai. */
+    gap: 82px;
+}
+/* <section> */
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex; /* o display: flex alinha por padrão os itens em uma linha */
+    flex-direction: column;
+    gap: 40px; /* o gap cria um espaco entre os itens do nosso container (seja uma div, um main, section, etc) */
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--font-primaria);
+}
+
+/* titulo principal */
+.titulo-destaque {
+    color: var(--cor-destaque);
+}
+
+.apresentacao__conteudo__paragrafo {
+    font-size: 1.5rem;
+    font-family: var(--font-secundaria);
+    font-weight: 400;
+}
+/* div com subtitulo e botoes */
+.apresentacao__links {
+    display: flex;
+    flex-direction: column; /* o flex-direction: column alinha os itens em coluna (um abaixo do outro) */
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+/* aceese minhas redes */
+.apresentacao__links__subtitulo {
+    font-family: var(--font-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+/* botoes (links) */
+.apresentacao__links__botao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 1.35rem 0rem; /* o primeiro valor altera o padding vertical (padding top e bottom) e o segundo o padding horizontal (left e right) */
+    text-decoration: none;
+    color: var(--cor-font);
+    font-family: var(--font-secundaria);
+    font-weight: 600;
+    border: 2px solid var(--cor-destaque); /* valor1 => indica a espessura da borda, valor2=> indica o tipo da borda, valor3 => a cor da borda */
+}
+
+.apresentacao__links__botao:hover {
+    background-color: var(--cor-hover);
+    width: 24.4rem;
+}
+
+/* stylo da lista pagina curriculo */
+.apresentacao__conteudo__paragrafo a {
+    text-decoration: none;
+    color: var(--cor-destaque);
+}
+
+.apresentacao__conteudo__paragrafo a:hover {
+    font-size: 1.6rem;
+}
+
+/* minha foto */
+.apresentacao__imagem {
+    border-radius: 3%;
+    width: 50%;
+}
+
+.apresentacao__links__botao img {
+    width: 15%;
+}
+
+/* rodape da pagina */
+.rodape {
+    color: var(--cor-background);
+    background-color: var(--cor-destaque);
+    padding: 1.5rem;
+    text-align: center;
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media ( max-width: 1200px ) {
+
+    .cabecalho {
+        padding: 10% 5%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto; /* austa automaticamente ao tamanho do elemento pai */
+    }
+}
