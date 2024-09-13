@@ -121,6 +121,11 @@ body {
     font-size: 1.6rem;
 }
 
+/* imagem coração */
+.heart__icon {
+    width: 7%;
+}
+
 /* minha foto */
 .apresentacao__imagem {
     border-radius: 3%;
